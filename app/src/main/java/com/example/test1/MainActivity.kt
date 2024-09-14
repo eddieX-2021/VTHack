@@ -4,14 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.test1.ui.theme.Test1Theme
+import com.example.test1.ui.components.CameraButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,12 +18,16 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Test1Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    content = { innerPadding ->
+                        Column(modifier = Modifier.padding(innerPadding)) {
+                            Greeting(name = "Android")
+                            Spacer(modifier = Modifier.weight(1f)) // Pushes CameraButton to bottom
+                            CameraButton(onClick = { /* Handle click */ })
+                        }
+                    }
+                )
             }
         }
     }
@@ -43,5 +46,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun GreetingPreview() {
     Test1Theme {
         Greeting("Android")
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    Test1Theme {
+        FixedButton() // Ensure this is the correct composable to preview
     }
 }
