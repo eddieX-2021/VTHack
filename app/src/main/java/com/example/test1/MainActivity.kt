@@ -1,4 +1,4 @@
-package com.example.test1
+package com.foodscanner.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,8 +9,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.test1.ui.theme.Test1Theme
-import com.example.test1.ui.components.CameraButton
+import com.foodscanner.app.ui.theme.Test1Theme
+import com.foodscanner.app.ui.components.CameraButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

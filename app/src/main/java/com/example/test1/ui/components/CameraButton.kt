@@ -1,4 +1,4 @@
-package com.example.test1.ui.screens
+package com.foodscanner.app.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Icon
@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.res.painterResource // For using a custom drawable
-import com.example.test1.ui.components.CameraButton
+import com.foodscanner.app.ui.components.CameraButton
 
 @Composable
 fun ScreenWithFixedButton() {

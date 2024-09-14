@@ -1,4 +1,4 @@
-package com.example.test1.ui.screens
+package com.foodscanner.app.ui.screens
 
 import androidx.camera.core.Camera
 import androidx.compose.foundation.layout.*
@@ -13,7 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import com.example.test1.ui.components.CameraButton
+import com.foodscanner.app.ui.components.CameraButton
 
 @Composable
 fun ScreenWithFixedButton() {

@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.test1"
+    namespace = "com.foodscanner.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.test1"
+        applicationId = "com.foodscanner.app"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
