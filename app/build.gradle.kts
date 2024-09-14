@@ -1,5 +1,4 @@
 plugins {
-    id("com.android.application")
     id("com.google.gms.google-services")
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -53,6 +52,7 @@ android {
 
 dependencies {
 
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -87,6 +87,15 @@ dependencies {
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
 
+    // Use this dependency to bundle the model with your app
+    implementation("com.google.mlkit:image-labeling:17.0.9")
+    implementation("com.google.android.gms:play-services-mlkit-image-labeling:16.0.8")
+
+    implementation("com.google.mlkit:labeling:18.1.0") // Make sure to use the latest version
+
+    implementation("androidx.camera:camera-core:1.2.0")
+    implementation("androidx.camera:camera-camera2:1.2.0")
+    implementation("androidx.camera:camera-lifecycle:1.2.0")
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
