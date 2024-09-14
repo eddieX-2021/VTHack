@@ -3,15 +3,18 @@ package com.foodscanner.app
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.OptIn
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
-import com.foodscanner.app.R
+import com.foodscanner.app.api.ApiClient
+import com.foodscanner.app.model.FoodItemResponse
 import com.google.mlkit.vision.barcode.Barcode
 import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.google.mlkit.vision.barcode.BarcodeScanning
+import com.google.mlkit.vision.barcode.common.Barcode
 import com.google.mlkit.vision.common.InputImage
 import retrofit2.Call
 import retrofit2.Callback
@@ -75,6 +78,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Process each frame and detect barcodes using ML Kit
+    @OptIn(ExperimentalGetImage::class)
     private fun processCameraFrame(imageProxy: ImageProxy) {
         val mediaImage = imageProxy.image
         if (mediaImage != null) {

@@ -1,11 +1,6 @@
 plugins {
-    // Apply the Android application plugin
     alias(libs.plugins.android.application)
-
-    // Apply the Kotlin Android plugin
     alias(libs.plugins.kotlin.android)
-
-    // Apply Google Services plugin for Firebase
     id("com.google.gms.google-services")
 }
 
@@ -90,11 +85,10 @@ dependencies {
     // Firebase BoM and Analytics
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-database") // Realtime Database
+    implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-auth")
 
-    // ML Kit dependencies (barcode scanning and image labeling)
-    implementation("com.google.mlkit:image-labeling:17.0.9")
+    // ML Kit barcode scanning (use only this for barcode scanning)
     implementation("com.google.mlkit:barcode-scanning:17.0.3")
 
     // Retrofit for making API calls
