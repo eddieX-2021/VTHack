@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055329070854",
+    "project_id": "android-food-scanner",
+    "storage_bucket": "android-food-scanner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055329070854:android:d0e037b4ac7e0f165bb887",
+        "android_client_info": {
+          "package_name": "com.vthacks.scanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVF2mSwhfisjUNI3sgMKUn_d2IMLOyuVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
