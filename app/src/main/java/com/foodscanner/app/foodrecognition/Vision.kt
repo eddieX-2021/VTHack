@@ -1,7 +1,5 @@
 package com.foodscanner.app.foodrecognition
 
-class Vision com.foodscanner.app.foodrecognition
-
 import android.content.Context
 import android.graphics.Bitmap
 import com.google.mlkit.vision.common.InputImage
@@ -40,6 +38,4 @@ class FoodRecognition(context: Context) {
         }
         return matchedItems
     }
-}
-{
 }

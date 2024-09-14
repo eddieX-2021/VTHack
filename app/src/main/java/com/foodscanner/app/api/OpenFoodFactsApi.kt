@@ -3,6 +3,8 @@ package com.foodscanner.app.api
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
+import com.foodscanner.app.model.FoodItemResponse
+
 
 // Define the OpenFoodFacts API service
 interface OpenFoodFactsApi {

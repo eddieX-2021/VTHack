@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.camera.view.PreviewView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/preview_view"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent">
 
-<androidx.camera.view.PreviewView
-android:id="@+id/preview_view"
-android:layout_width="match_parent"
-android:layout_height="400dp" />
+    <!-- Camera Preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true" />
 
-<TextView
-android:id="@+id/foodNameTextView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Food Name"
-android:textSize="18sp"
-android:layout_below="@id/preview_view"/>
+    <!-- Food Name TextView -->
+    <TextView
+        android:id="@+id/foodNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="18sp"
+        android:layout_below="@id/preview_view"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
 
-<TextView
-android:id="@+id/foodCaloriesTextView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Calories"
-android:textSize="18sp"
-android:layout_below="@id/foodNameTextView"/>
+    <!-- Food Calories TextView -->
+    <TextView
+        android:id="@+id/foodCaloriesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:textSize="18sp"
+        android:layout_below="@id/foodNameTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
 
-<TextView
-android:id="@+id/foodIngredientsTextView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Ingredients"
-android:textSize="18sp"
-android:layout_below="@id/foodCaloriesTextView"/>
+    <!-- Food Ingredients TextView -->
+    <TextView
+        android:id="@+id/foodIngredientsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredients"
+        android:textSize="18sp"
+        android:layout_below="@id/foodCaloriesTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+</RelativeLayout>

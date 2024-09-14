@@ -1,4 +1,4 @@
-package com.foodscanner.app.foodrecognition
+package com.foodscanner.app
 
 import android.os.Bundle
 import android.util.Log
@@ -24,7 +24,7 @@ class CameraActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_camera)
+        setContentView(R.layout.activitycamera)
 
         previewView = findViewById(R.id.preview_view)
 
