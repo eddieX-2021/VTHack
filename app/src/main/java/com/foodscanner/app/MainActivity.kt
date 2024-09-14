@@ -1,5 +1,6 @@
 package com.foodscanner.app
 
+
 import android.Manifest
 import android.os.Bundle
 import android.util.Log
@@ -17,12 +18,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.foodscanner.app.ui.theme.Test1Theme // Updated to reflect new package name
+import com.foodscanner.app.ui.theme.Test1Theme
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.Labeling
 import com.google.mlkit.vision.label.Labeler
 import java.util.concurrent.Executors
 import androidx.core.content.ContextCompat
+
 import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : ComponentActivity() {
@@ -33,6 +35,40 @@ class MainActivity : ComponentActivity() {
 
         // Initialize Firebase
         FirebaseDatabase.getInstance().setPersistenceEnabled(true)
+
+        // Initialize ML Kit Image Labeler
+        labeler = Labeling.getClient()
+
+        // Request camera permissions
+        val requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
+            if (isGranted) {
+                startCamera()
+            } else {
+                Log.e("MainActivity", "Camera permission denied")
+            }
+        }
+        requestPermissionLauncher.launch(Manifest.permission.CAMERA)
+
+        setContent {
+            Test1Theme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    Greeting(
+                        name = "Android",
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+            }
+        }
+    }
+
+    // Remaining code for startCamera() and ImageAnalyzer goes here...
+}
+
+    private lateinit var labeler: Labeler
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // enableEdgeToEdge() // Remove or replace this line if not needed
 
         // Initialize ML Kit Image Labeler
         labeler = Labeling.getClient()
