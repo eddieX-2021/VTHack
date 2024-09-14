@@ -1,7 +1,6 @@
-package com.example.test1
+package com.foodscanner.app
 
 import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -18,19 +17,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.test1.ui.theme.Test1Theme
+import com.foodscanner.app.ui.theme.Test1Theme // Updated to reflect new package name
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.Labeling
 import com.google.mlkit.vision.label.Labeler
 import java.util.concurrent.Executors
 import androidx.core.content.ContextCompat
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : ComponentActivity() {
     private lateinit var labeler: Labeler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // enableEdgeToEdge() // Remove or replace this line if not needed
+
+        // Initialize Firebase
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true)
 
         // Initialize ML Kit Image Labeler
         labeler = Labeling.getClient()

@@ -82,9 +82,13 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.5.1")
 
+
     // Firebase BoM and Analytics
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
     implementation("com.google.firebase:firebase-analytics")
+    // Firebase services you want to use
+    implementation("com.google.firebase:firebase-database")      // Realtime Database
+    implementation("com.google.firebase:firebase-auth")
 
     // ML Kit dependencies
     implementation("com.google.mlkit:image-labeling:17.0.9")
