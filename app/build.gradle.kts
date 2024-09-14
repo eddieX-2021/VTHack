@@ -1,7 +1,12 @@
 plugins {
-    id("com.google.gms.google-services")
+    // Apply the Android application plugin only once
     alias(libs.plugins.android.application)
+    
+    // Apply the Kotlin Android plugin
     alias(libs.plugins.kotlin.android)
+
+    // Apply Google Services plugin for Firebase
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -51,8 +56,6 @@ android {
 }
 
 dependencies {
-
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -75,28 +78,21 @@ dependencies {
     implementation("androidx.compose.material:material:1.5.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
 
-// Optional for UI testing
+    // Optional for UI testing
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.5.1")
     debugImplementation("androidx.compose.ui:ui-tooling:1.5.1")
 
-    // Import the Firebase BoM
+    // Firebase BoM and Analytics
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))
-
-
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
 
-    // Use this dependency to bundle the model with your app
+    // ML Kit dependencies
     implementation("com.google.mlkit:image-labeling:17.0.9")
     implementation("com.google.android.gms:play-services-mlkit-image-labeling:16.0.8")
+    implementation("com.google.mlkit:labeling:18.1.0")
 
-    implementation("com.google.mlkit:labeling:18.1.0") // Make sure to use the latest version
-
+    // Android CameraX dependencies
     implementation("androidx.camera:camera-core:1.2.0")
     implementation("androidx.camera:camera-camera2:1.2.0")
     implementation("androidx.camera:camera-lifecycle:1.2.0")
-
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
 }

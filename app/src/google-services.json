@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "332589888279",
+    "project_id": "vthack-ea3ea",
+    "storage_bucket": "vthack-ea3ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332589888279:android:151240870e6765ba56fd52",
+        "android_client_info": {
+          "package_name": "com.foodscanner.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRPkBetQ_ZJmLYPEUx0EdL8JaDtqAqWlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
