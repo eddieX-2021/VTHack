@@ -100,7 +100,31 @@ dependencies {
     OpenFoodFacts API: The app sends the barcode to the OpenFoodFacts API to fetch food-related data.
     Spoonacular API (optional): Used to suggest recipes based on scanned food items.
 
-#Future Enhancements
+#Project Workflow
++-----------------+        +--------------------+       +----------------+
+|                 |        |                    |       |                |
+|  Camera Input   +------->|  ML Kit (Barcode)   +------>|  Barcode       |
+|  (CameraX)      |        |  Detection          |       |  Detected      |
+|                 |        |                    |       |                |
++-----------------+        +--------------------+       +----------------+
+                                                                 |
+                                                                 |
+                                                          +------+------+
+                                                          |             |
+                                                    +-----v-----+ +-----v------+
+                                                    | Fetch from| |Display in   |
+                                                    | API (e.g.,| |UI (Name,    |
+                                                    | OpenFood- | |Calories,    |
+                                                    | Facts)    | |Ingredients) |
+                                                    +-----------+ +-------------+
+                                                           |
+                                                           |
+                                                    +------v-------+
+                                                    | Firebase      |
+                                                    | Save Food     |
+                                                    | Data for User |
+                                                    +---------------+
+
 
     Add more detailed nutritional tracking (e.g., aggregate daily calorie intake).
     Implement push notifications to remind users about expiring food items.
