@@ -1,10 +1,9 @@
 package com.foodscanner.app.foodrecognition
 
-class visionpackage com.foodscanner.app.vision
+class Vision com.foodscanner.app.foodrecognition
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.util.Log
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.label.ImageLabel
 import com.google.mlkit.vision.label.ImageLabeler

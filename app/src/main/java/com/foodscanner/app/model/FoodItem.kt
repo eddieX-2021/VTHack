@@ -1,6 +1,6 @@
 package com.foodscanner.app.model
 
-class fooditem {
+class FoodItem {
 
     data class FoodItem(
         val name: String = "",

@@ -99,4 +99,13 @@ dependencies {
     implementation("androidx.camera:camera-core:1.2.0")
     implementation("androidx.camera:camera-camera2:1.2.0")
     implementation("androidx.camera:camera-lifecycle:1.2.0")
+    // CameraX View library for PreviewView
+    implementation("androidx.camera:camera-view:1.2.0")
+
+    // barcode scanning google api
+    implementation("com.google.mlkit:barcode-scanning:17.0.3")
+
+    // Retrofit for making API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 }
